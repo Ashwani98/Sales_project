@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styling.css">
+</head>
+
+<body style="background-color:black;">
+<nav class="navi">
+    <div class="logo-box">
+        <img src="../media/pics/mi-tv-4-1200.jpg" alt="pic" class="logo-pic">
+        <h1 class="logo-name" >Hello!!</h1>
+    </div>
+    <div class="desc-box">
+        <h1>Welcome to our page!</h1>
+    </div>
+    <form class="form-box">
+        <input type="text" class="search-box" placeholder="How may we help you..">
+        <button class="button-box"><img src="" alt="s"></button>
+    </form>
+    <div>
+        <ul class="nav-item-box">
+            <li><a href="stock">Stock</a></li>
+            <li><a href="sales">Sales</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="center-box">
+    <h1 class="heading">Available Products</h1>
+    <div class="photo-area">
+        {% for item in items %}
+        <div class="photo-box">
+            <figure class="figure-box">
+<!--                <p style="border:2px solid black;">{{item.name}}</p>-->
+                <a href="https://www.{{item.brand}}.com" ><img src="{{item.img.url}}" alt="img" class="image"></a>
+                <figcaption class="caption">{{item.name}}</figcaption>
+            </figure>
+            <h5 class="desc">{{item.name}} is a product of {{item.brand}} and is a very reputed brand of this product. order here for more such products</h5>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<footer class="foot-box">
+    <div class="about-box">
+        <div>
+            <h2>About Hello</h2>
+        </div>
+        <div>
+            <p>this is our first company; aksdfasdf asfdafer ffa aagaaa aqrefs asdjajs ajhs dua puf  ans dfuhquf ahs duyqefuh asuh fuufh suh piahrpiq e adf.</p>
+        </div>
+    </div>
+    <div class="social-box">
+        <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+        </ul>
+
+    </div>
+
+</footer>
+</body>
+</html>

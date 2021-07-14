@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stocks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styling.css">
+</head>
+<body>
+    <nav class="navi">
+    <div class="logo-box">
+        <img src="../media/pics/mi-tv-4-1200.jpg" alt="pic" class="logo-pic">
+        <h1 class="logo-name" >Hello!!</h1>
+    </div>
+    <div class="desc-box">
+        <h1>Welcome to our page!</h1>
+    </div>
+    <form class="form-box">
+        <input type="text" class="search-box" placeholder="How may we help you..">
+        <button class="button-box"><img src="" alt="s"></button>
+    </form>
+    <div>
+        <ul class="nav-item-box">
+            <li><a href="stock">Stock</a></li>
+            <li><a href="sales">Sales</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <table class="table-box" style="border: 2px solid black; background-color:teal; padding: 15px; margin: 10px;">
+        {% for item in items %}
+        <tr class="row-box" style="background-color: gray; margin:10px"><td style="border: 2px solid black;padding:10px;color: maroon;">{{item}}</td></tr>
+        {% endfor %}
+    </table>
+
+
+
+</body>
+</html>
