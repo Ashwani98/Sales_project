@@ -69,6 +69,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Sales_project.wsgi.application'
+ASGI_APPLICATION = 'Sales_project.asgi.application'
+# ASGI_APPLICATION = 'Sales_project.routing.application'
+# CHANNEL_LAYERS = {
+#     "default": {
+#         'BACKEND': 'channels_redis.core.RedisChannelLayer',
+#         'CONFIG': {
+#             "hosts": [('127.0.0.1', 6379)],
+#         },
+#     },
+# }
 
 
 # Database
